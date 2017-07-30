@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.action.extension" value="action"></constant>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	
+	<!-- 设置上传文件 -->
+    <constant name="struts.multipart.saveDir" value="/tmpUpload"/>
+    <package name="default" extends="struts-default">
+    	<action name="watermark_single" class="org.com.cay.action.SingleWaterMarkAction" method="watermark">
+    		<param name="uploadPath">/images</param>
+    		<result name="success">singlewatermark.jsp</result>
+    	</action>
+    	<action name="watermark_multi" class="org.com.cay.action.MultiWaterMarkAction" method="watermark">
+    		<param name="uploadPath">/images</param>
+    		<result name="success">multiwatermark.jsp</result>
+    	</action>
+    </package>
+	
+</struts>   

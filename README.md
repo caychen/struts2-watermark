@@ -1,0 +1,2 @@
+#struts2-watermark
+struts2版的水印图片
